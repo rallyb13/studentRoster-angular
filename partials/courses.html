@@ -1,0 +1,21 @@
+<div ng-show="courses.length">
+  <h2>Fascinating Of-Courses</h2>
+  <h6>Sign up today or get stuck with the loser courses.</h6>
+  <ul>
+    <li ng-repeat="item in courses">
+      <a ui-sref="courses.students({ courseId: item.id})"> {{item.name}} </a>
+    </li>
+  </ul>
+</div>
+
+<div class="col-md-4">
+  <h3>Add a new course?</h3>
+  <form ng-submit="CoursesFactory.addCourse()" class="form-inline">
+    <div class="form-group">
+      <input type="text" ng-model="CoursesFactory.courseName" class="form-control" placeholder="course name" required>
+    </div>
+    <button type="submit" class="btn btn-warning">Of course!</button>
+  </form>
+</div>
+
+<div ui-view> </div>
