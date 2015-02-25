@@ -11,4 +11,10 @@ courseRoster.config(function($stateProvider) {
     templateUrl: "partials/courses.html",
     controller: 'CoursesCtrl'
   });
+
+  $stateProvider.state('courses.students', {
+    url: "/:courseId",
+    templateUrl: "partials/courses.students.html",
+    controller: 'StudentsCtrl'
+  });
 });
